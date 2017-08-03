@@ -3,9 +3,9 @@
   copy:
     src: "{{ fetch_directory }}/{{ fsid }}/etc/ceph/{{ cluster }}.client.admin.keyring"
     dest: "/etc/ceph/"
-    owner: "ceph"
-    group: "ceph"
-    mode: "0600"
+    owner: "root"
+    group: "root"
+    mode: "0644"
   when: cephx
 
 - name: check if global key exists in ceph_conf_overrides
